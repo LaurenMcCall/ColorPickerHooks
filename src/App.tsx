@@ -1,5 +1,10 @@
 import React from 'react'
+import { ColorPicker } from './components/ColorPicker'
 
 export function App() {
-  return <div>Hello, World </div>
+  return (
+    <div>
+      <ColorPicker />
+    </div>
+  )
 }
