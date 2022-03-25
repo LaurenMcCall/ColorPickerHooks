@@ -7,6 +7,21 @@ html {
 }
 
 body {
-  margin: 0;
   min-height: 100%;
+  padding-top: 25px;
+}
+
+body section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10%;
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 15px rgb(94, 7, 7);
+  border-radius: 10px;
+  position: relative;
 }
