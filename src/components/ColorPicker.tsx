@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 export function ColorPicker() {
-  const [hue, setHue] = useState('60')
+  const [hue, setHue] = useState('303')
   const [saturation, setSaturation] = useState('50')
   const [lightness, setLightness] = useState('50')
-  const [alpha, setAlpha] = useState('50')
+  const [alpha, setAlpha] = useState('100')
   const newBackgroundColor = `hsla(${hue},${saturation}%,${lightness}%, ${alpha}%)`
   const newStyle = { backgroundColor: newBackgroundColor }
 
@@ -28,12 +28,16 @@ export function ColorPicker() {
   return (
     <div>
       <header style={newStyle}>
-        <p>df d fd </p>
+        <div>
+          hsla({hue}, {saturation}%, {lightness}%, {alpha})
+        </div>
       </header>
+
       <body>
         <section>
           <input
             value={hue}
+            className="slider"
             onChange={handleHueRange}
             type="range"
             id="Hue"
@@ -41,7 +45,8 @@ export function ColorPicker() {
             min="0"
             max="360"
           />
-          <label htmlFor="Hue">Hue {hue}</label>
+
+          <label htmlFor="Hue">Hue: {hue}</label>
         </section>
         <section>
           <input
@@ -53,7 +58,7 @@ export function ColorPicker() {
             min="0"
             max="100"
           />
-          <label htmlFor="Saturation">Saturation {saturation}</label>
+          <label htmlFor="Saturation">Saturation: {saturation}%</label>
         </section>
         <section>
           <input
@@ -65,7 +70,7 @@ export function ColorPicker() {
             min="0"
             max="100"
           />
-          <label htmlFor="Lightness">Lightness {lightness}</label>
+          <label htmlFor="Lightness">Lightness: {lightness}%</label>
         </section>
         <section>
           <input
@@ -77,7 +82,7 @@ export function ColorPicker() {
             min="0"
             max="100"
           />
-          <label htmlFor="Alpha">Alpha {alpha}</label>
+          <label htmlFor="Alpha">Alpha: {alpha}</label>
         </section>
       </body>
     </div>
