@@ -15,9 +15,7 @@ header {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 40px;
-  border: 3px;
-  border-color: rgb(254, 254, 254);
-  border-style: solid;
+  border: solid 1.7px white;
   border-radius: 9px;
   justify-content: center;
   font-weight: bold;
@@ -35,6 +33,7 @@ header div {
   justify-content: center;
   // background-size: cover;
 }
+
 body {
   min-height: 100%;
   padding-top: 25px;
@@ -42,6 +41,18 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  margin-top: 35px;
+  margin-bottom: -19px;
+  background-color: #dd38b7;
+  border: solid 1.7px white;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  width: 35%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
 body section {
   display: flex;
   flex-wrap: wrap;
@@ -63,20 +74,20 @@ input[type='range'] {
   background: -moz-linear-gradient(
     top,
     #ff0000 0%,
-    #ffff00 17%,
-    #00ff00 33%,
-    #00ffff 50%,
-    #0000ff 67%,
+    #ce22e9 17%,
+    #ad237f 33%,
+    #af3377 50%,
+    #ee0ecc 67%,
     #ff00ff 83%,
     #ff0000 100%
   );
   background: -ms-linear-gradient(
     top,
     #ff0000 0%,
-    #ffff00 17%,
-    #00ff00 33%,
-    #00ffff 50%,
-    #0000ff 67%,
+    #ce22e9 17%,
+    #ad237f 33%,
+    #af3377 50%,
+    #ee0ecc 67%,
     #ff00ff 83%,
     #ff0000 100%
   );
@@ -115,24 +126,18 @@ input[type='range'] {
   background: linear-gradient(
     to bottom,
     #ff0000 0%,
-    #ffff00 17%,
-    #00ff00 33%,
-    #00ffff 50%,
-    #0000ff 67%,
-    #ff00ff 83%,
+    #df54f5 17%,
+    #c5139c 33%,
+    #df2089 50%,
+    #ee0ecc 67%,
+    #f32ff3 83%,
     #ff0000 100%
   );
-  border: solid 1px #0f0f0f;
+  border: solid 1px #ffffff;
   border-radius: 7px;
-  // height: 12px;
   width: auto;
-  // outline: none;
-  // transition: background 450ms ease-in;
-  // -webkit-appearance: none;
-  // position: relative;
   margin-bottom: 14px;
-  margin-top: -9px;
-
+  margin-top: -15px;
   // background-image: url('fa-solid fa-mushroom');
 }
 input[type='range']::-moz-range-thumb {
@@ -149,3 +154,14 @@ input[type='range']::-webkit-slider-thumb {
   border: none;
   border-radius: 6px;
 }
+.flex {
+  display: flex;
+  justify-content: center;
+}
+// #ff0000 0%,
+//     #ffff00 17%,
+//     #00ff00 33%,
+//     #00ffff 50%,
+//     #0000ff 67%,
+//     #ff00ff 83%,
+//     #ff0000 100%
