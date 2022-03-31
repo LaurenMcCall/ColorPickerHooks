@@ -49,6 +49,20 @@ export function ColorPicker() {
 
   return (
     <div>
+      <head>
+        <h2>
+          <img
+            src="/images/mushroom.svg"
+            alt="cute little mushroom"
+            width="25px"
+            // height="20px"
+          />
+          Welcome to the <br></br> Mad Color Picker Party
+        </h2>
+        <h4 style={newStyle}>
+          hsla({hue}, {saturation}%, {lightness}%, {alpha}){' '}
+        </h4>
+      </head>
       <header>
         <div style={newStyle}>
           <img
@@ -59,6 +73,10 @@ export function ColorPicker() {
           />
         </div>
       </header>
+      <aside>
+        We&apos;re all mad here
+        <img src="/images/mushroom.svg" alt="little mushroom" width="25px" />
+      </aside>
       <div className="flex">
         <button onClick={handleClickRandomColorButton}>Random Color</button>
       </div>
@@ -123,6 +141,11 @@ export function ColorPicker() {
           <label htmlFor="Alpha">Alpha: {alpha}</label>
         </section>
       </body>
+      <footer>
+        <h6 className="stroke-text-footer">
+          Built with madness by Lauren McCall
+        </h6>
+      </footer>
     </div>
   )
 }
