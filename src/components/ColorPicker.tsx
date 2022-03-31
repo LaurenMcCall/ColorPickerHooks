@@ -1,12 +1,27 @@
 import React, { useState } from 'react'
 
 export function ColorPicker() {
-  const [hue, setHue] = useState<string | number>('311')
-  const [saturation, setSaturation] = useState<string | number>('56')
-  const [lightness, setLightness] = useState<string | number>('50')
-  const [alpha, setAlpha] = useState<string | number>('100')
+  const [hue, setHue] = useState<string | number>(
+    Math.floor(Math.random() * 361)
+  )
+  const [saturation, setSaturation] = useState<string | number>(
+    Math.floor(Math.random() * 101)
+  )
+  const [lightness, setLightness] = useState<string | number>(
+    Math.floor(Math.random() * 101)
+  )
+  const [alpha, setAlpha] = useState<string | number>(
+    Math.floor(Math.random() * 101)
+  )
   const newBackgroundColor = `hsla(${hue},${saturation}%,${lightness}%, ${alpha}%)`
   const newStyle = { backgroundColor: newBackgroundColor }
+  // const minColor = { minColors: newStyle }
+  // const maxColor = { maxColors: newStyle }
+  // const newSaturation = newStyle
+  // const saturationGradient = {
+  //   background: `linear-gradient(to right, ${newSaturation} 0%, ${newSaturation}100%)`,
+  // }
+  // let color = newStyle
 
   function handleClickRandomColorButton() {
     setHue(Math.floor(Math.random() * 360))
@@ -14,6 +29,7 @@ export function ColorPicker() {
     setLightness(Math.floor(Math.random() * 101))
     setAlpha(Math.floor(Math.random() * 101))
   }
+
   function handleHueRange(event: React.ChangeEvent<HTMLInputElement>) {
     event.preventDefault()
     setHue(event.target.value)
@@ -33,9 +49,14 @@ export function ColorPicker() {
 
   return (
     <div>
-      <header style={newStyle}>
-        <div>
-          hsla({hue}, {saturation}%, {lightness}%, {alpha})
+      <header>
+        <div style={newStyle}>
+          <img
+            // className="shadow"
+            src="images/teaparty.svg"
+            alt="alice in wonderland tea party"
+            width="100%"
+          />
         </div>
       </header>
       <div className="flex">
@@ -45,7 +66,7 @@ export function ColorPicker() {
         <section>
           <input
             value={hue}
-            className="slider"
+            className="hue-slider"
             onChange={handleHueRange}
             type="range"
             id="Hue"
@@ -53,12 +74,17 @@ export function ColorPicker() {
             min="0"
             max="360"
           />
-
           <label htmlFor="Hue">Hue: {hue}</label>
         </section>
         <section>
           <input
+            style={newStyle}
+            // style={{
+            //   background: `linear-gradient(to right, ${minColor}, ${maxColor})`,
+            // }}
+            // style={saturationGradient}
             value={saturation}
+            // className="saturation-slider"
             onChange={handleSaturationRange}
             type="range"
             id="Saturation"
@@ -70,7 +96,9 @@ export function ColorPicker() {
         </section>
         <section>
           <input
+            style={newStyle}
             value={lightness}
+            // className="lightness-slider"
             onChange={handleLightnessRange}
             type="range"
             id="Lightness"
@@ -82,7 +110,9 @@ export function ColorPicker() {
         </section>
         <section>
           <input
+            style={newStyle}
             value={alpha}
+            // className="alpha-slider"
             onChange={handleAlphaRange}
             type="range"
             id="Alpha"
