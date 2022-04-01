@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import MushroomImage from '/images/mushroom.svg'
 import TeapartyImage from '/images/teaparty.svg'
+// import style from 'src/index.scss'
 
 export function ColorPicker() {
   const [hue, setHue] = useState<string | number>(
@@ -18,13 +19,13 @@ export function ColorPicker() {
   const newBackgroundColor = `hsla(${hue},${saturation}%,${lightness}%, .${alpha})`
   const newStyle = { backgroundColor: newBackgroundColor }
 
-  const satGradient = `-webkit-linear-gradient(45deg, hsla(${hue},0%,${lightness}%,.${alpha}), hsla(${hue},20%,${lightness}%,.${alpha}), hsla(${hue},40%,${lightness}%,.${alpha}), hsla(${hue},60%,${lightness}%,.${alpha}), hsla(${hue},80%,${lightness}%,.${alpha}), hsla(${hue},100%,${lightness}%,.${alpha}))`
+  const satGradient = `linear-gradient(45deg, hsla(${hue},0%,${lightness}%,.${alpha}), hsla(${hue},20%,${lightness}%,.${alpha}), hsla(${hue},40%,${lightness}%,.${alpha}), hsla(${hue},60%,${lightness}%,.${alpha}), hsla(${hue},80%,${lightness}%,.${alpha}), hsla(${hue},100%,${lightness}%,.${alpha}))`
   const gradientSatStyle = { background: satGradient }
 
-  const satLightness = `-webkit-linear-gradient(45deg, hsla(${hue},${saturation}%,0%,.${alpha}), hsla(${hue},${saturation}%,20%,.${alpha}), hsla(${hue},${saturation}%,40%,.${alpha}), hsla(${hue},${saturation}%,60%,.${alpha}), hsla(${hue},${saturation}%,80%,.${alpha}), hsla(${hue},${saturation}%,100%,.${alpha}))`
+  const satLightness = `linear-gradient(45deg, hsla(${hue},${saturation}%,0%,.${alpha}), hsla(${hue},${saturation}%,20%,.${alpha}), hsla(${hue},${saturation}%,40%,.${alpha}), hsla(${hue},${saturation}%,60%,.${alpha}), hsla(${hue},${saturation}%,80%,.${alpha}), hsla(${hue},${saturation}%,100%,.${alpha}))`
   const gradientLightStyle = { background: satLightness }
 
-  const satAlpha = `-webkit-linear-gradient(45deg, hsla(${hue},${saturation}%,${lightness}%,0), hsla(${hue},${saturation}%,${lightness}%,.20), hsla(${hue},${saturation}%,${lightness}%,.4), hsla(${hue},${saturation}%,${lightness}%,.6000000000000001), hsla(${hue},${saturation}%,${lightness}%,.8), hsla(${hue},${saturation}%,${lightness}%,1.0))`
+  const satAlpha = `linear-gradient(45deg, hsla(${hue},${saturation}%,${lightness}%,0), hsla(${hue},${saturation}%,${lightness}%,.20), hsla(${hue},${saturation}%,${lightness}%,.4), hsla(${hue},${saturation}%,${lightness}%,.6000000000000001), hsla(${hue},${saturation}%,${lightness}%,.8), hsla(${hue},${saturation}%,${lightness}%,1.0))`
   const gradientAlphaStyle = { background: satAlpha }
 
   function handleClickRandomColorButton() {
@@ -55,7 +56,7 @@ export function ColorPicker() {
     <div>
       <head>
         <h2 className="stroke-text-h2">
-          <img src={MushroomImage} width="25px" />
+          <img src={MushroomImage} alt="cute little mushroom" width="25px" />
           Welcome to the <br></br> Mad Color Picker Party
         </h2>
         <h4 style={newStyle}>
@@ -73,7 +74,7 @@ export function ColorPicker() {
       </header>
       <aside className="stroke-text-aside">
         we&apos;Re aLL mAd HeRe
-        <img src={MushroomImage} width="25px" />
+        <img src={MushroomImage} alt="cute little mushroom" width="25px" />
       </aside>
       <div className="flex">
         <button onClick={handleClickRandomColorButton}>Random Color</button>

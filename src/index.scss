@@ -116,6 +116,9 @@ body section {
 }
 
 input[type='range'] {
+  -webkit-appearance: none;
+}
+input[type='range'] {
   border: solid 1px black;
   border-radius: 7px;
   max-width: 100%;
@@ -132,7 +135,15 @@ input[type='range']::-moz-range-thumb {
 }
 
 input[type='range']::-webkit-slider-thumb {
+  // -webkit-appearance: none;
   background: black;
+  height: 27px;
+  border: none;
+  border-radius: 6px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  background: transparent;
   height: 27px;
   border: none;
   border-radius: 6px;
@@ -145,7 +156,7 @@ input[type='range']::-webkit-slider-thumb {
 
 .hue-slider {
   background: -moz-linear-gradient(
-    top,
+    to right,
     #ff0000 0%,
     #ffff00 17%,
     #00ff00 33%,
@@ -155,7 +166,7 @@ input[type='range']::-webkit-slider-thumb {
     #ff0000 100%
   );
   background: -ms-linear-gradient(
-    top,
+    to right,
     #ff0000 0%,
     #ffff00 17%,
     #00ff00 33%,
@@ -165,7 +176,7 @@ input[type='range']::-webkit-slider-thumb {
     #ff0000 100%
   );
   background: -o-linear-gradient(
-    top,
+    to right,
     #ff0000 0%,
     #ffff00 17%,
     #00ff00 33%,
@@ -187,7 +198,7 @@ input[type='range']::-webkit-slider-thumb {
     to(#ff0000)
   );
   background: -webkit-linear-gradient(
-    top,
+    to right,
     #ff0000 0%,
     #ffff00 17%,
     #00ff00 33%,
@@ -232,46 +243,6 @@ footer {
     3px 3px 9px rgb(0, 0, 0), -1px -1px 3px rgb(0, 0, 0);
 }
 
-.grad1 {
-  height: 200px;
-  background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(
-    left,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  ); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(
-    right,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  ); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(
-    right,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  ); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(
-    to right,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  ); /* Standard syntax (must be last) */
-}
 .stroke-text-h2 {
   color: black;
   text-shadow: -3px -1px 5px #ec1ebc, 1px 1px 1px yellow, 1px 1px 0px yellow,
