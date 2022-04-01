@@ -58,7 +58,6 @@ export function ColorPicker() {
             src="/images/mushroom.svg"
             alt="cute little mushroom"
             width="25px"
-            // height="20px"
           />
           Welcome to the <br></br> Mad Color Picker Party
         </h2>
@@ -69,7 +68,6 @@ export function ColorPicker() {
       <header>
         <div style={newStyle}>
           <img
-            // className="shadow"
             src="/images/teaparty.svg"
             alt="alice in wonderland tea party"
             width="100%"
@@ -100,12 +98,7 @@ export function ColorPicker() {
         <section>
           <input
             style={gradientSatStyle}
-            // style={{
-            //   background: satGradient,
-            // }}
-            // style={saturationGradient}
             value={saturation}
-            // className="test"
             onChange={handleSaturationRange}
             type="range"
             id="Saturation"
@@ -119,7 +112,6 @@ export function ColorPicker() {
           <input
             style={gradientLightStyle}
             value={lightness}
-            // className="lightness-slider"
             onChange={handleLightnessRange}
             type="range"
             id="Lightness"
@@ -133,13 +125,12 @@ export function ColorPicker() {
           <input
             style={gradientAlphaStyle}
             value={alpha}
-            className="test"
             onChange={handleAlphaRange}
             type="range"
             id="Alpha"
             name="Alpha"
-            min=".0"
-            max="1.0"
+            min="0.0"
+            max="1."
           />
           <label htmlFor="Alpha">Alpha: {alpha}</label>
         </section>
