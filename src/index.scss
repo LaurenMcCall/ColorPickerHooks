@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 :root {
   font: 16px / 1 'Merienda', cursive;
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: rgb(248, 200, 222);
 }
 
 html {
@@ -37,7 +37,7 @@ h2 img {
 }
 h4 {
   color: white;
-  border: 1px solid white;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 7px;
   padding: 5px 5px 5px 5px;
   text-shadow: -1px 0px 3px black;
@@ -109,7 +109,7 @@ button {
   margin-bottom: -19px;
   font-family: 'Merienda', cursive;
   background-color: hsl(310.9, 56.1%, 50%);
-  border: solid 1.7px white;
+  border: solid 1px black;
   border-radius: 7px;
   font-weight: bold;
   text-shadow: 1px 1px 1px #0f0f0f;
@@ -155,28 +155,32 @@ body section {
 }
 
 input[type='range'] {
-  border: solid 1px #ffffff;
+  border: solid 1px black;
   border-radius: 7px;
   max-width: 100%;
   max-height: 100%;
-  margin-bottom: 14px;
+  margin-bottom: 5px;
   margin-top: -15px;
 }
 
 input[type='range']::-moz-range-thumb {
-  background: #ffffff;
+  background: black;
   height: 27px;
   border: none;
   border-radius: 6px;
 }
 
 input[type='range']::-webkit-slider-thumb {
-  background: #ffffff;
+  background: black;
   height: 27px;
   border: none;
   border-radius: 6px;
 }
-
+// aside div {
+//   display: flex;
+//   background-image: url(/images/mushroom.svg);
+//   background-size: 30px;
+// }
 .flex {
   display: flex;
   justify-content: center;
@@ -268,7 +272,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(images/mushroom.svg);
+  background-image: url(/images/mushroom.svg);
   background-size: 11%;
   max-width: 100%;
   background-repeat: space;
@@ -277,7 +281,6 @@ footer {
   bottom: 0;
   // width: 100%;
   height: 60px;
-  color: white;
   text-align: center;
   font-size: 1.6rem;
 }
@@ -327,3 +330,26 @@ footer {
     violet
   ); /* Standard syntax (must be last) */
 }
+.stroke-text-h2 {
+  color: black;
+  text-shadow: -3px -1px 5px #ec1ebc, 1px 1px 1px yellow, 1px 1px 0px yellow,
+    -1px -1px 4px yellow;
+}
+.stroke-text-aside {
+  color: rgb(0, 0, 0);
+  text-shadow: -2px -1px 3px #ec1ebc, 0px 0px 3px yellow, 0px 0px 0px yellow,
+    -1px -1px 2px yellow;
+}
+// .test {
+//   background-size: contain;
+//   background-image: -webkit-linear-gradient(
+//       45deg,
+//       rgba(255, 255, 255, 0.2) 100%,
+//       transparent 25%,
+//       transparent 75%,
+//       rgba(255, 255, 255, 0.2) 75%,
+//       rgba(255, 255, 255, 0.2)
+//     ),
+//     -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent
+//           75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2));
+// }
