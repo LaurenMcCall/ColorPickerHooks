@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import MushroomImage from '/images/mushroom.svg'
+import TeapartyImage from '/images/teaparty.svg'
 
 export function ColorPicker() {
   const [hue, setHue] = useState<string | number>(
@@ -30,7 +32,6 @@ export function ColorPicker() {
     setSaturation(Math.floor(Math.random() * 101))
     setLightness(Math.floor(Math.random() * 101))
     setAlpha(Math.floor(Math.random() * 101))
-    console.log(gradientLightStyle)
   }
 
   function handleHueRange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -54,11 +55,7 @@ export function ColorPicker() {
     <div>
       <head>
         <h2 className="stroke-text-h2">
-          <img
-            src="/images/mushroom.svg"
-            alt="cute little mushroom"
-            width="25px"
-          />
+          <img src={MushroomImage} width="25px" />
           Welcome to the <br></br> Mad Color Picker Party
         </h2>
         <h4 style={newStyle}>
@@ -68,7 +65,7 @@ export function ColorPicker() {
       <header>
         <div style={newStyle}>
           <img
-            src="/images/teaparty.svg"
+            src={TeapartyImage}
             alt="alice in wonderland tea party"
             width="100%"
           />
@@ -76,7 +73,7 @@ export function ColorPicker() {
       </header>
       <aside className="stroke-text-aside">
         we&apos;Re aLL mAd HeRe
-        <img src="/images/mushroom.svg" alt="little mushroom" width="25px" />
+        <img src={MushroomImage} width="25px" />
       </aside>
       <div className="flex">
         <button onClick={handleClickRandomColorButton}>Random Color</button>
